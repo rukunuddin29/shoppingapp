@@ -1,0 +1,95 @@
+/* ProductDetails.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    justify-content: space-between;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 50vh;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: auto;
+    height: 50vh;
+border: 2px solid rgb(235, 235, 235) ;
+border-bottom: none;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 1rem;
+ 
+  }
+  
+ 
+  
+  .button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #0c0c0c;
+  }
+  
+  .descriptionBox {
+   margin: 0rem 1rem;
+
+  }
+  
+  .descTitle {
+    font-size: 1.25rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .description {
+    color: #474747;
+    padding-bottom: 0.5rem;
+  }
+  
+  .readMoreBtn {
+    position: relative;
+    float: right;
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+    padding:  0px 10px ;
+    color: rgb(1, 1, 1);
+  }
+  
+  .pricebox{
+    display: flex ;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .readMoreBtn:hover {
+    text-decoration: underline;
+    color: blue;
+  }
+  .price{
+    font-size: x-large;
+  }
+ 
+  
