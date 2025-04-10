@@ -16,28 +16,43 @@
     border-radius: 8px;
     padding: 1rem;
   }
-  
   .details {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    margin-top: auto;
+    justify-content: space-between;
     height: 50vh;
-border: 2px solid rgb(235, 235, 235) ;
-border-bottom: none;
+    border: 2px solid rgb(235, 235, 235);
+    border-bottom: none;
     border-radius: 20px 20px 0px 0px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
   }
   
-  
+  /* Title styling remains the same */
   .title {
     font-size: 1.25rem;
     font-weight: bold;
-    padding: 1rem;
- 
   }
   
- 
+  /* Description box stays near the top */
+  .descriptionBox {
+    margin: 1rem 0;
+    flex-grow: 1;
+  }
+  
+  /* Price + Add to Cart at bottom */
+  .pricebox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e2e2;
+  }
+  
+  .price {
+    font-size: x-large;
+  }
   
   .button {
     background-color: #000000;
@@ -53,43 +68,4 @@ border-bottom: none;
   .button:hover {
     background-color: #0c0c0c;
   }
-  
-  .descriptionBox {
-   margin: 0rem 1rem;
-
-  }
-  
-  .descTitle {
-    font-size: 1.25rem;
-    padding-bottom: 0.5rem;
-  }
-  
-  .description {
-    color: #474747;
-    padding-bottom: 0.5rem;
-  }
-  
-  .readMoreBtn {
-    position: relative;
-    float: right;
-    border: none;
-    background-color: transparent;
-    font-weight: 500;
-    padding:  0px 10px ;
-    color: rgb(1, 1, 1);
-  }
-  
-  .pricebox{
-    display: flex ;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-  .readMoreBtn:hover {
-    text-decoration: underline;
-    color: blue;
-  }
-  .price{
-    font-size: x-large;
-  }
- 
   
