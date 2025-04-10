@@ -6,50 +6,58 @@
     max-width: 600px;
     margin: auto;
     justify-content: space-between;
+    padding-bottom: 20px;
   }
   
   .image {
     width: 100%;
     height: auto;
     object-fit: contain;
-    max-height: 50vh;
+    max-height: 60vh;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 3rem;
   }
   .details {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 50vh;
+    height: 40vh;
+    background-color: white;
     border: 2px solid rgb(235, 235, 235);
     border-bottom: none;
     border-radius: 20px 20px 0px 0px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1), 
+            -4px 0 12px rgba(0, 0, 0, 0.05), 
+            4px 0 12px rgba(0, 0, 0, 0.05);
+
     padding: 1rem;
   }
   
-  /* Title styling remains the same */
+
   .title {
     font-size: 1.25rem;
     font-weight: bold;
   }
-  
-  /* Description box stays near the top */
+
   .descriptionBox {
     margin: 1rem 0;
     flex-grow: 1;
   }
   
-  /* Price + Add to Cart at bottom */
+
   .pricebox {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff; /* ensure it's visible */
+    border-top: 1px solid #e2e2e2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto;
-    padding-top: 1rem;
-    border-top: 1px solid #e2e2e2;
+    padding: 1rem 2rem;
+    z-index: 100; /* Stay on top */
   }
-  
   .price {
     font-size: x-large;
   }
@@ -67,5 +75,51 @@
   
   .button:hover {
     background-color: #0c0c0c;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .container {
+      flex-direction: row;
+      align-items: flex-start;
+      max-width: 100%;
+      height: 100vh;
+      border: 2px solid black;
+      padding: 2rem;
+      background: white;
+      gap: 2rem;
+      padding-bottom: 0; /* Remove extra space */
+    }
+  
+    .image {
+      max-width: 50%;
+      padding: 7rem;
+      max-height: none;
+      background-color: rgb(235, 235, 235);
+      margin-left: 50px;
+      border-radius: 20px;
+    }
+    .image img{
+        padding: 2rem;
+        border-radius: 20px;
+    }
+  
+    .details {
+      flex: 1;
+      height: auto;
+      border-radius: 20px;
+     box-shadow: none;
+     border: none;
+     padding: 7rem 10rem 10rem 1rem;
+      
+    }
+  
+    .pricebox {
+      position: static;
+      border-top: none;
+      padding: 1rem 0;
+      margin-top: 1rem;
+      background-color: transparent;
+      box-shadow: none;
+    }
   }
   

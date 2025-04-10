@@ -1,0 +1,40 @@
+.bottomNav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    border-top: 1px solid #444;
+  }
+  
+  .navItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #A5E9E1;
+    font-size: 0.75rem;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .navItem:hover {
+    color: #388186;
+  }
+  
+  .badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: #388186;
+    color: white;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+  }
+  

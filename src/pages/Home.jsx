@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import styles from "../styles/Home.module.css";
 import { MdAddShoppingCart } from "react-icons/md";
 import Loading from "../components/Loading";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -29,8 +31,10 @@ function Home() {
   if (products.length === 0) return <Loading />;
 
   return (
+    <>
+    <Navbar/>
     <div className={styles.container}>
-      <h1 className={styles.title}>All Products</h1>
+      
       <div className={styles.grid}>
         {products.map((product) => (
           <div
@@ -61,8 +65,11 @@ function Home() {
             </div>
           </div>
         ))}
+
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

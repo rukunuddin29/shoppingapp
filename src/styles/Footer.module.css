@@ -1,0 +1,73 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+.footer {
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .logo {
+    color: #A5E9E1;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navLinks li {
+    color: #A5E9E1;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .navLinks li:hover {
+    color: #388186;
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .iconCircle {
+    background-color: #A5E9E1;
+    color: #2E2B2B;
+    padding: 0.75rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .iconCircle:hover {
+    background-color: #388186;
+    color: white;
+  }
+  
+  .description {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    color: #ddd;
+  }
+  
