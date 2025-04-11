@@ -26,9 +26,27 @@ const CartProvider = ({ children }) => {
   const clearCart = () => {
     setCartItems([]);
   };
+  const increaseQuantity = (id) => {
+    setCartItems(prev =>
+      prev.map(item =>
+        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
+  };
+  
+  const decreaseQuantity = (id) => {
+    setCartItems(prev =>
+      prev.map(item =>
+        item.id === id && item.quantity > 1
+          ? { ...item, quantity: item.quantity - 1 } : item
+      )
+    );
+  };
+  
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, clearCart }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, clearCart, increaseQuantity,
+  decreaseQuantity }}>
       {children}
     </CartContext.Provider>
   );

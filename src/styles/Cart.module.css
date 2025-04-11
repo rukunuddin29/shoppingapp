@@ -83,7 +83,7 @@
     background: white;
     border-top: 1px solid #ddd;
     padding: 1rem;
-    border-radius: 40px 40px 0 0;
+    border-radius: 20px 40px 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,5 +112,104 @@
   
   .cartSummary button:hover {
     background-color: #333;
+  }
+  
+  .cart-badge {
+    position: relative;
+    margin-left: 5px;
+    font-weight: bold;
+    color: white;
+    background: #333;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+  .red-dot {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    height: 8px;
+    width: 8px;
+    background-color: red;
+    border-radius: 50%;
+  }
+  .cartContainer {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .cartList {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+  }
+  
+  .cartItem {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+  }
+  
+  .itemImage {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .itemDetails {
+    flex: 1;
+  }
+  
+  .quantityControl {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0.5rem 0;
+  }
+  
+  .quantityControl button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .quantity {
+    margin: 0;
+  }
+  
+  .removeBtn {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin-top: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .cartSummary {
+    text-align: right;
+    margin-top: 2rem;
+  }
+  
+  .clearBtn,
+  .checkoutBtn {
+    background-color: #ededed;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+  
+  .clearBtn:hover,
+  .checkoutBtn:hover {
+    background-color: #000;
   }
   
