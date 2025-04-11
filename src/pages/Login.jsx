@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { LuEye, LuEyeClosed } from 'react-icons/lu'; 
 import styles from '../styles/Login.module.css';
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -39,22 +41,30 @@ function Login() {
   return (
     <div className={styles.container}>
       <div>
-        <h2 className={styles.title}>Login</h2>
+        <h2 className={styles.title}>Fashions</h2>
+        <h2 className={styles.welcome}>Welcome,</h2>
+        <p className={styles.para}>please login to continue to our store.</p>
         <form className={styles.box} onSubmit={handleLogin}>
+          <p>username</p>
           <input
             type="text"
-            placeholder="Username"
             className={styles.input}
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-          <input
-            type="password"
-            placeholder="Password"
-            className={styles.input}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <p>password</p>
+<div className={styles.passwordContainer}>
+  <input
+    type={showPassword ? 'text' : 'password'}
+    className={styles.input}
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+  />
+  <span onClick={() => setShowPassword(!showPassword)}>
+    {showPassword ? <LuEyeClosed /> : <LuEye />}
+  </span>
+</div>
+
           <button type="submit" className={styles.button}>
             Login
           </button>
