@@ -38,9 +38,10 @@ function Home() {
 
   return (
     <>
-      <Navbar />
+      
       <h1 className={styles.logo}>Shopee</h1>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <Navbar />
       <div className={styles.container}>
         <div className={styles.grid}>
           {filteredProducts.map((product) => (
