@@ -29,7 +29,7 @@
   
   .container {
     max-width: 1280px;
-    margin: 2rem auto;
+    margin: 1rem auto;
     padding: 0 1rem;
   }
   
@@ -55,7 +55,7 @@
     border: 2px solid #e9e9e9;
     display: flex;
     flex-direction: column;
-    height: auto;
+    height: 90%;
     background-color: #f1f1f1;
   }
   
@@ -105,7 +105,6 @@
       padding: 1.25rem; /* restore original padding for desktop */
       border-radius: 12px;
     }
-    
   
     .image {
       height: 240px; /* restore original image height */
