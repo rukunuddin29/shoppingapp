@@ -41,7 +41,7 @@ function Login() {
   return (
     <div className={styles.container}>
       <div>
-        <h2 className={styles.title}>Fashions</h2>
+        <h2 className={styles.title}>Shopee</h2>
         <h2 className={styles.welcome}>Welcome,</h2>
         <p className={styles.para}>please login to continue to our store.</p>
         <form className={styles.box} onSubmit={handleLogin}>
