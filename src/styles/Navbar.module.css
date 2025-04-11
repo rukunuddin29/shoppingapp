@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #A5E9E1;
+    color: white;
     font-size: 0.75rem;
     position: relative;
     cursor: pointer;
@@ -24,14 +24,14 @@
   }
   
   .navItem:hover {
-    color: #388186;
+    color: white;
   }
   
   .badge {
     position: absolute;
     top: -6px;
     right: -6px;
-    background-color: #388186;
+    background-color: white;
     color: white;
     font-size: 0.65rem;
     padding: 2px 6px;

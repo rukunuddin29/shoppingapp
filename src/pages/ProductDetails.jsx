@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+// ProductDetails.jsx
+import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import styles from "../styles/ProductDetails.module.css";
 import Loading from "../components/Loading";
+import { CartContext } from "../context/CartContext";
 
 function ProductDetails() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+  const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`)
@@ -28,7 +31,12 @@ function ProductDetails() {
 
         <div className={styles.pricebox}>
           <h3 className={styles.price}>${product.price}</h3>
-          <button className={styles.button}>Add to Cart</button>
+          <button 
+            className={styles.button} 
+            onClick={() => addToCart(product)}
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
@@ -36,4 +44,3 @@ function ProductDetails() {
 }
 
 export default ProductDetails;
-  
