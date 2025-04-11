@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { TbHome2 } from "react-icons/tb";
+import { TbHomeFilled } from "react-icons/tb";
 import { BsCart4 } from "react-icons/bs";
 import { RiLogoutBoxRLine } from "react-icons/ri";
 import styles from '../styles/Navbar.module.css';
@@ -15,20 +15,17 @@ function BottomNavbar({ cartCount = 0 }) {
 
   return (
     <nav className={styles.bottomNav}>
-      <div className={styles.navItem} onClick={() => navigate('/home')}>
-        <TbHome2 size={24} />
-        <span>Home</span>
+      <div className={styles.homeIcon} onClick={() => navigate('/home')}>
+        <TbHomeFilled size={22} />
       </div>
 
       <div className={styles.navItem} onClick={() => navigate('/cart')}>
-        <BsCart4 size={24} />
-        <span>Cart</span>
+        <BsCart4 size={22} />
         {cartCount > 0 && <span className={styles.badge}>{cartCount}</span>}
       </div>
 
       <div className={styles.navItem} onClick={handleLogout}>
-        <RiLogoutBoxRLine size={24} />
-        <span>Logout</span>
+        <RiLogoutBoxRLine size={22} />
       </div>
     </nav>
   );

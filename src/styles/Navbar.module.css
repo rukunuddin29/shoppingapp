@@ -3,38 +3,58 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 60px;
-    background-color: #121212;
+    height: 65px;
+    background-color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
     z-index: 1000;
-    border-top: 1px solid #444;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.12);
+    padding: 0 1rem;
   }
   
-  .navItem {
+  /* Home: just icon in black circle */
+  .homeIcon {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    background-color: black;
     color: white;
-    font-size: 0.75rem;
-    position: relative;
+    padding: 12px;
+    border-radius: 50%;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: transform 0.2s ease;
+  }
+  
+  .homeIcon:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Cart & Logout: clean icons */
+  .navItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    cursor: pointer;
+    transition: transform 0.2s ease;
   }
   
   .navItem:hover {
-    color: white;
+    transform: scale(1.1);
   }
   
   .badge {
     position: absolute;
-    top: -6px;
-    right: -6px;
-    background-color: white;
+    top: -5px;
+    right: -10px;
+    background-color: red;
     color: white;
     font-size: 0.65rem;
     padding: 2px 6px;
     border-radius: 50%;
+    font-weight: bold;
   }
   
